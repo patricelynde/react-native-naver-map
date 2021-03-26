@@ -142,13 +142,13 @@ RCT_CUSTOM_VIEW_PROPERTY(stopGesturesEnabled, BOOL, RNNaverMapView)
 
 RCT_CUSTOM_VIEW_PROPERTY(tilt, NSNumber*, RNNaverMapView)
 {
-  if (json == nil) view.mapView.tilt = 1.0f;
+  if (json == nil) view.mapView.tilt = 0;
   view.mapView.tilt = [json floatValue];
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(bearing, NSNumber*, RNNaverMapView)
 {
-  if (json == nil) view.mapView.bearing = 1.0f;
+  if (json == nil) view.mapView.bearing = 0;
   view.mapView.bearing = [json floatValue];
 }
 
