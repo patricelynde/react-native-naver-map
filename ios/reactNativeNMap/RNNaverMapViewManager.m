@@ -140,16 +140,16 @@ RCT_CUSTOM_VIEW_PROPERTY(stopGesturesEnabled, BOOL, RNNaverMapView)
   view.mapView.stopGestureEnabled = [json boolValue];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(tilt, BOOL, RNNaverMapView)
+RCT_CUSTOM_VIEW_PROPERTY(tilt, NSNumber*, RNNaverMapView)
 {
-  // TODO
-  RCTLogError(@"Invalid view returned from registry, expecting NMFMapView, got: ");
+  if (json == nil) view.mapView.tilt = 1.0f;
+  view.mapView.tilt = [json floatValue];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(bearing, BOOL, RNNaverMapView)
+RCT_CUSTOM_VIEW_PROPERTY(bearing, NSNumber*, RNNaverMapView)
 {
-  // TODO
-  RCTLogError(@"Invalid view returned from registry, expecting NMFMapView, got: ");
+  if (json == nil) view.mapView.bearing = 1.0f;
+  view.mapView.bearing = [json floatValue];
 }
 
 RCT_EXPORT_METHOD(setLocationTrackingMode:(nonnull NSNumber *)reactTag
