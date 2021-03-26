@@ -143,11 +143,13 @@ RCT_CUSTOM_VIEW_PROPERTY(stopGesturesEnabled, BOOL, RNNaverMapView)
 RCT_CUSTOM_VIEW_PROPERTY(tilt, BOOL, RNNaverMapView)
 {
   // TODO
+  RCTLogError(@"Invalid view returned from registry, expecting NMFMapView, got: ");
 }
 
 RCT_CUSTOM_VIEW_PROPERTY(bearing, BOOL, RNNaverMapView)
 {
   // TODO
+  RCTLogError(@"Invalid view returned from registry, expecting NMFMapView, got: ");
 }
 
 RCT_EXPORT_METHOD(setLocationTrackingMode:(nonnull NSNumber *)reactTag
