@@ -32,7 +32,7 @@ RCT_EXPORT_MODULE(RNNaverMapView)
   return map;
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(center, NMFCameraUpdate*, RNNaverMapView)
+RCT_CUSTOM_VIEW_PROPERTY(center, NMFCameraUpdateWith*, RNNaverMapView)
 {
   if (json == nil) return;
   [view.mapView moveCamera: [RCTConvert NMFCameraUpdateWith: json]];
